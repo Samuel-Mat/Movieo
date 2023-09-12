@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/372358616d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Movieo</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/svg+xml" />
+  </head>
+  <body id="body">
+    <div class="content" id="maincontent">
+      <div class="tv-background" id="tv">
+        <div class="content-tv" id="tvcontent"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="input-area-content">
+        <ul id="suggestion-list"></ul>
+        <input
+          type="text"
+          class="input-area"
+          id="input-area"
+          oninput="SearchBar()"
+        />
+        <div class="submit-btn" onclick="CheckAnswer()">
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <div class="closeBtn" onclick="togglePopupPlot()">&times;</div>
+        <h1>Plot</h1>
+        <span id="plot">Plot</span>
+      </div>
+    </div>
+    <div class="popup" id="popup-2">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <div class="closeBtn" onclick="reload()">&times;</div>
+        <h1>Congratulations You Won!</h1>
+        <img src="images/trophy.png" alt="" />
+        <div class="statistics">
+          <div class="streak"><span id="streakWin">12</span>Your Streak</div>
+          <div class="totalWins">
+            <span id="totalWinsWin">122</span>Total Wins
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <div class="closeBtn" onclick="reload()">&times;</div>
+        <h1>Sorry you lost, it was <b id="movieName"></b></h1>
+        <img src="images/gameover.png" alt="" />
+        <div class="statistics">
+          <div class="streak"><span id="streakLose">12</span>Your Streak</div>
+          <div class="totalWins">
+            <span id="totalWinsLose">122</span>Total Wins
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="getMovie.js"></script>
+    <script src="app.js"></script>
+    <script src="popups.js"></script>
+    <script src="hints.js"></script>
+    <script src="searchBar.js"></script>
+  </body>
+</html>
