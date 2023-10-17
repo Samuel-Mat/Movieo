@@ -20,7 +20,7 @@ async function GetMovieName() {
 
 async function GetMovie(movieName) {
   const data = await fetch(
-    `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`
+    `https://www.omdbapi.com/?t=${movieName}&apikey=${key}`
   )
     .then((response) => response.json())
     .then((json) => {
