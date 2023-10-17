@@ -16,7 +16,7 @@ StartGame();
 async function StartGame() {
   movieName = await GetMovieName();
   movielist = await fetch(
-    `https://movieobackendlafinaltest.azurewebsites.net/Movie/AllMovies`,
+    `https://movie-backend-docker.onrender.com/Movie/AllMovies`,
     {
       method: "GET",
       headers: {

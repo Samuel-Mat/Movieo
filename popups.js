@@ -23,6 +23,13 @@ function ShowLosePopUp() {
   ShowPoster();
 }
 
+function ShowAddPopUp() {
+  const freezeBox = document.createElement("div");
+  freezeBox.className = "freezeBox";
+  body.append(freezeBox);
+  togglePopupAdd();
+}
+
 function togglePopupPlot() {
   document.getElementById("popup-1").classList.toggle("active");
 }
@@ -32,6 +39,9 @@ function togglePopupWin() {
 }
 function togglePopupLose() {
   document.getElementById("popup-3").classList.toggle("active");
+}
+function togglePopupAdd() {
+  document.getElementById("popup-4").classList.toggle("active");
 }
 
 function reload() {

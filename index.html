@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/svg+xml" />
   </head>
   <body id="body">
+    <i class="fa-solid fa-gear" onclick="togglePopupAdd()"></i>
     <div class="content" id="maincontent">
       <div class="tv-background" id="tv">
         <div class="content-tv" id="tvcontent"></div>
@@ -47,9 +48,9 @@
         <h1>Congratulations You Won!</h1>
         <img src="images/trophy.png" alt="" />
         <div class="statistics">
-          <div class="streak"><span id="streakWin">12</span>Your Streak</div>
+          <div class="streak"><span id="streakWin">0</span>Your Streak</div>
           <div class="totalWins">
-            <span id="totalWinsWin">122</span>Total Wins
+            <span id="totalWinsWin">0</span>Total Wins
           </div>
         </div>
       </div>
@@ -69,10 +70,27 @@
         </div>
       </div>
     </div>
+
+    <div class="popup" id="popup-4">
+      <div class="overlay"></div>
+      <div class="popup-content">
+        <div class="closeBtn" onclick="togglePopupAdd()">&times;</div>
+        <h1>Add a Movie</h1>
+        <input type="text" id="newMovieName" class="newMovieInput" />
+        <input
+          type="submit"
+          value="Submit"
+          onclick="addMovie()"
+          class="newMovieSubmit"
+        />
+      </div>
+    </div>
+
     <script src="getMovie.js"></script>
     <script src="app.js"></script>
     <script src="popups.js"></script>
     <script src="hints.js"></script>
     <script src="searchBar.js"></script>
+    <script src="addMovie.js"></script>
   </body>
 </html>
